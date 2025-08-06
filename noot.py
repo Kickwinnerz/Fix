@@ -1,5 +1,3 @@
-
-import requests
 import bs4
 import json
 import os
@@ -1350,6 +1348,7 @@ for xd in range(10000):
             Mano_menu()
             
         
+
 
 
 
