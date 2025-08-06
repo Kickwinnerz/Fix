@@ -1348,8 +1348,8 @@ for xd in range(10000):
             os.mkdir('data')
             os.system('touch .prox.txt')
             Mano_menu()
-            return None
-        return None
+            
+        
 
 
 
